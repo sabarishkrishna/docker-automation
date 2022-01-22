@@ -1,4 +1,4 @@
-# **docker-automation**
+# docker-automation
 
  ____   ___   ____ _  _______ ____  
 |  _ \ / _ \ / ___| |/ / ____|  _ \ 
