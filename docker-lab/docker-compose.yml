@@ -1,0 +1,16 @@
+version: '2.1'
+
+services:
+    sabarish:
+        container_name: sabarish
+        privileged: true
+        cap_add:
+             - NET_ADMIN
+             - SYS_ADMIN
+        build: .
+        hostname: labs1
+        ports:
+            - "22:22"
+            - "51820:51820"
+        
+        

@@ -1,0 +1,18 @@
+#!/bin/sh
+
+printf '\e[32m'
+
+
+figlet labs
+
+printf "\033[38;5;196m\033[1mWelcome to NOEL dev-env\033[0m\n"
+# printf "\033[38;5;214mLearn the Art of Hacking Through Programming,\033[0m \033[38;5;031m\033[1ma basics course.\033[0m \n\n"
+printf "\033[38;5;212mThis machine runs on \033[1m%s (%s %s %s)\n" "$DISTRIB_DESCRIPTION" "$(uname -o)" "$(uname -r)" "$(uname -m)"
+printf "\e[32m\n"
+        echo "WARNING"
+        echo "--------"
+        echo "1. This environment includes everything required for development."
+        echo "2. push your code everytime whenever you make changes."
+        echo "3. Please always scan your computer system with an anti-virus software."
+        # echo "4. Place all your files inside ~/storage directory. Files outside this place will be deleted periodically."
+printf "\n\033[38;5;196m\033[1mWith great power comes great responsiblity. Happy coding:)\033[0m\n"
