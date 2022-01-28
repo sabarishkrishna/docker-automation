@@ -16,16 +16,17 @@ def run_lab():
         wg4 = run('docker exec -d sabarish wg set wg0 listen-port 51820 peer Dot1GLD/9avuhrtaXZvroRAUYdQDMOmdK7z8uax9FBU= allowed-ips 172.31.0.0/24 endpoint 18.224.252.107:51820',stdout=PIPE,shell=True,stderr=PIPE,text=True)
         wg5 = run('docker exec -d sabarish route add -net 172.31.0.0/24 wg0',stdout=PIPE,shell=True,stderr=PIPE,text=True)
         if(wg1 and wg2 and wg3 and wg4 and wg5):
-            print("hello world")
-
-
-run_lab()
-
+            print("[+] Lab is built...")
+            print("[+] ssh using the ip address")
 
 
 
-# RUN ip link add wg0 type wireguard
-# RUN ip addr add 172.20.0.4/32 dev wg0
-# RUN wg set wg0 private-key ./privatekey
-# RUN ip link set wg0 up
-# RUN wg set wg0 peer Dot1GLD/9avuhrtaXZvroRAUYdQDMOmdK7z8uax9FBU= allowed-ips 172.20.0.1/32 endpoint 18.224.252.107:51820
+if __name__ == "__main__":
+    result = pyfiglet.figlet_format("docker-labs")
+    print(result)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("build", help="build labs")
+    args = parser.parse_args()
+
+    if args.build == "build":
+        run_lab()
