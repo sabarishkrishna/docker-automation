@@ -13,7 +13,7 @@ def run_lab():
         wg2 = run('docker exec -d sabarish ip addr add 172.31.0.4/32 dev wg0',stdout=PIPE,shell=True,stderr=PIPE,text=True)
         wg3 = run('docker exec -d sabarish wg set wg0 private-key ./privatekey',stdout=PIPE,shell=True,stderr=PIPE,text=True)
         wg4 = run('docker exec -d sabarish ip link set wg0 up',stdout=PIPE,shell=True,stderr=PIPE,text=True)
-        wg4 = run('docker exec -d sabarish wg set wg0 listen-port 51820 peer Dot1GLD/9avuhrtaXZvroRAUYdQDMOmdK7z8uax9FBU= allowed-ips 172.31.0.0/24 endpoint 18.224.252.107:51820',stdout=PIPE,shell=True,stderr=PIPE,text=True)
+        wg4 = run('docker exec -d sabarish wg set wg0 listen-port 51820 peer Dot1GLD/9avuhrtaXZvroRAUYdQDMOmdK7z8uax9FBU= allowed-ips 172.31.0.0/24 endpoint 18.221.124.181:51820',stdout=PIPE,shell=True,stderr=PIPE,text=True)
         wg5 = run('docker exec -d sabarish route add -net 172.31.0.0/24 wg0',stdout=PIPE,shell=True,stderr=PIPE,text=True)
         if(wg1 and wg2 and wg3 and wg4 and wg5):
             print("[+] Lab is built...")
